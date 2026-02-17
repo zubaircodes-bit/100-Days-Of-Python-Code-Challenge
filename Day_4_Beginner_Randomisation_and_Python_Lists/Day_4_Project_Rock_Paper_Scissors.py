@@ -23,9 +23,10 @@ scissors = '''
        __________)
       (____)
 ---.__(___)'''
+print("Welcome to rock paper and scissors game.s")
+
 
 choices = [rock, paper, scissors]
-
 userChoice = int(input("Enter 0 for rock, 1 for paper, 2 for scissors: "))
 computerChoice = random.randint(0, 2)
 
