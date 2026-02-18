@@ -19,11 +19,15 @@ symbols = [
 numbersCount = int(input("How many numbers would you like in your Password ? \n "))
 lettersCount = int(input("How many letters would you like in your Password ? \n "))
 symbolsCount = int(input("How many symbols would you like in your Password ? \n "))
-password = ""
+password = []
 for i in range(0, numbersCount):
-  password += random.choice(numbers);
+  password.append(random.choice(numbers))
 for i in range(0, lettersCount):
-  password += random.choice(letters);
+  password.append(random.choice(letters))
 for i in range(0, symbolsCount):
-  password += random.choice(symbols);
-print(f"Your Password is {password}.")
+  password.append(random.choice(symbols))
+random.shuffle(password)
+passwordstring = ""
+for char in password:
+  passwordstring += char
+print(f"Your Password is {passwordstring}.")
